@@ -1,0 +1,14 @@
+Recursions :- A function solving a problem by breaking it into smaller problems.
+> Two important components in recursion.
+> 1. Base case - breaking case of our function (or) stopping condition / prevents infinite calls. 
+> 2. Recursive case - function calls itself with smaller or larger input.
+
+ Types of functions :
+ 1. Direct recursion
+ 2. Indirect recursion
+ 3. Head recursion
+ 4. Tail recursion
+ 5. Tree recursion
+ 6. Nested recursion
+ 7. Linear recursion
+

@@ -1,0 +1,6 @@
+Types of functions:
+
+1. argument pass, return value.
+2. argument pass, no return value.
+3. no argument, retrun value.
+4. no argument, no retrun value.
