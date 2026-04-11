@@ -1,0 +1,6 @@
+a=list(map(int,input("Enter the elements of the array:").split()))
+print("Before sorting:",a)
+a.sort()
+print("Ascending order:",a)
+a.sort(reverse=True) 
+print("Descending order:",a)

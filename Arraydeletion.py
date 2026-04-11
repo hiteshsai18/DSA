@@ -1,0 +1,6 @@
+n=int(input("Size of array:"))
+a=list(map(int,input("Enter the elements:").split()))
+print("Array before deletion:",a)
+index=int(input("Enter the index of element to be deleted:"))
+a.pop(index)
+print("Array after deletion:",a)

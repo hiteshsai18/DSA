@@ -1,0 +1,5 @@
+a=list(input("Enter the Characters:").split())
+print("Before Insert op:",a)
+index,char=map(str,input("Enter index and character:").split())
+a.insert(int(index),char)
+print("After Insert op:",a)  

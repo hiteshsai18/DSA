@@ -1,0 +1,5 @@
+a=list(map(int,input("Enter the elements:").split()))
+print("Array before insert op:", a)
+index, element =map(int,input("Position and element:").split())
+a.insert(index, element)
+print("Array after insert op:",a)
