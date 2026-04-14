@@ -1,64 +1,88 @@
-dry run to rotate an array.
+Types of searching :-
 
-1st iteration.
-arr = [1, 2, 3, 4, 5, 6]
-last = 6
-
-len(arr) = 6
-range = 5 -> 1
-arr[5] = arr[4]
-
-[1, 2, 3, 4, 5, 5]
-
-i=4
-
-arr[4] = arr[3]
-
-[1, 2, 3, 4, 4, 5]
-
-i=3
-
-arr[3] = arr[2]
-
-[1, 2, 3, 3, 4, 5]
-
-i=2
-
-arr[2] = arr[1]
-
-[1, 2, 2, 3, 4, 5]
-
-i=1
-
-arr[1] = arr[0]
-
-[1, 1, 2, 3, 4, 5]
-
-[6, 1, 2, 3, 4, 5]
+1) Linear search.
+2) Binary search.
+3) Jump search.
 
 
-dry run to move zeroes to the end.
+-----> Linear Search.
 
-arr=[0, 1, 0, 3, 2]
+*It's a simple technique where you check each element one-by-one until you find the target.
 
-zero=0
-1. arr[i] = 0
-zero=0
-[1, 0, 0, 3, 2]
+11 22 33 44 55 66
+0  1  2  3  4  5
 
-2. arr[i] = 1
-1 =0
-[1, 3, 0, 0, 2]
+target=55
 
-3. arr[i] = 2
-skip
+goes through index from 0 to 5 and stops and returns the index of the taget.
 
-4. arr[i] = 3
-3 !=0
-0 -> 3  3 -> 0
-[1, 3, 2, 0, 0]
+Algo :-
 
-5. i=4
-arr[i] != 0
-2 !=0
-swap 0 -> 2  2 -> 0
+1. Start with index 0.
+2. Compare each element with target.
+3. If matches, return index value.
+4. If not(else), move to te next element.
+5. If reaches end, element not found.
+
+
+-----> Binary Search.
+
+*We divide the array and conquer it(search the element).
+*Only works on sorted arrays and traverses from left to right.
+
+arr = 5 9 17 23 25 45 59 63 71 89
+Index 0 1 2  3  4  5  6  7  8  9
+                M  L  R  M     R
+search=59 
+
+4.5-->floor = 4
+
+L  R  M      L=mid+1
+0  9  4            
+5  9  7
+5  6  5
+
+Algo :-
+
+1. 2 pointers 
+    left = 0
+    right = len(arr)-1
+2. mid = (left+right)//2
+3. Compare
+   if arr[mid] == target
+   elif target<arr[mid] --> search left part
+   elif target>arr[mid] --> search right part
+4. repeat until left = high = right
+
+
+-----> Jump Search.
+
+*Divides the array into equal parts and searches linearily within.
+
+2 4 6 8 10 12 14 16 18
+0 1 2 3 4  5  6  7  8
+
+target=16
+len(arr)=9
+
+squareroot(9)=3
+
+2 4 6     8 10 12     14 16 18
+  1          4            7
+
+target=2==16
+target=8==16
+target=14==16
+initial+=1
+target=1=4==16
+target=4=10==16
+target=7=16==16 True
+
+Algo :-
+
+1. Choose step size which is squareroot of len(arr)
+2. Jump for all divided steps
+3. Stop when 
+    element is greater or
+    end of array is reached
+
